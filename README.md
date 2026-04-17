@@ -255,7 +255,7 @@ Deploy the backend from this repo with `render.yaml`.
 Render service:
 
 - Runtime: Node
-- Build command: `npm install && npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/api`
+- Build command: `npm install --include=dev && npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/api`
 - Start command: `npm run start --workspace @memeguard/api`
 - Health check: `/health`
 

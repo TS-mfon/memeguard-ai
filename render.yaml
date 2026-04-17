@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: starter
     rootDir: .
-    buildCommand: npm install && npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/api
+    buildCommand: npm install --include=dev && npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/api
     startCommand: npm run start --workspace @memeguard/api
     healthCheckPath: /health
     envVars:
