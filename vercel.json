@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/web",
+  "installCommand": "npm install --include=dev",
+  "framework": "nextjs",
+  "outputDirectory": "apps/web/.next"
+}
