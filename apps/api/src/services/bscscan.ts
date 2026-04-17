@@ -11,8 +11,8 @@ async function callBscScan<T>(params: Record<string, string>, warnings: string[]
     warnings.push("BSCSCAN_API_KEY is not configured; explorer enrichment skipped.");
     return null;
   }
-  const url = new URL("https://api.bscscan.com/api");
-  for (const [key, value] of Object.entries({ ...params, apikey: config.bscScanApiKey })) {
+  const url = new URL("https://api.etherscan.io/v2/api");
+  for (const [key, value] of Object.entries({ chainid: "56", ...params, apikey: config.bscScanApiKey })) {
     url.searchParams.set(key, value);
   }
   try {
