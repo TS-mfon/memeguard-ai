@@ -54,12 +54,45 @@ export function Dashboard() {
             </div>
             <a className="btn secondary" href="/about" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>About</a>
           </div>
-          <h1 className="hero-title">AI risk briefs before the meme gets amplified.</h1>
-          <p className="hero-copy">
-            Paste a BNB Smart Chain token contract. MemeGuard AI checks live contract evidence, explorer data,
-            ownership signals, transfer behavior, and optional social context, then writes a plain-English trust brief
-            for holders, moderators, and launch communities.
-          </p>
+          <div className="hero-layout" style={{ marginTop: 28 }}>
+            <div>
+              <p className="eyebrow" style={{ margin: 0 }}>Launch intelligence for memecoin culture</p>
+              <h1 className="hero-title">AI risk briefs before the meme gets amplified.</h1>
+              <p className="hero-copy">
+                Paste a BNB Smart Chain token contract. MemeGuard AI checks live contract evidence, explorer data,
+                ownership signals, transfer behavior, and optional social context, then writes a plain-English trust brief
+                for holders, moderators, and launch communities.
+              </p>
+              <div className="hero-actions">
+                <a className="btn" href="#lookup" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>Analyze a token</a>
+                <a className="btn secondary" href="/about" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>Read the pitch</a>
+              </div>
+            </div>
+
+            <aside className="live-console" aria-label="MemeGuard analysis preview">
+              <div className="console-inner">
+                <div className="chip-row">
+                  <span className="chip">BSC mainnet</span>
+                  <span className="chip">Four.meme ready</span>
+                  <span className="chip">Read-only</span>
+                </div>
+                <div className="console-score">
+                  <div className="score-orbit">72</div>
+                  <div>
+                    <p className="eyebrow" style={{ margin: 0 }}>Preview verdict</p>
+                    <h2 style={{ margin: "6px 0" }}>Watchlist</h2>
+                    <p style={{ color: "var(--muted)", lineHeight: 1.55, margin: 0 }}>
+                      The token has readable metadata, but ownership and distribution require review before community amplification.
+                    </p>
+                  </div>
+                </div>
+                <div className="console-row"><span>Source code</span><strong>Verified</strong></div>
+                <div className="console-row"><span>Owner controls</span><strong style={{ color: "var(--amber-2)" }}>Needs review</strong></div>
+                <div className="console-row"><span>Community output</span><strong>X + Telegram + Discord</strong></div>
+              </div>
+            </aside>
+          </div>
+
           <div className="stat-strip">
             <div className="stat"><strong>Live BSC</strong><span>RPC and BscScan evidence</span></div>
             <div className="stat"><strong>AI Analyst</strong><span>OpenAI with Gemini fallback</span></div>
@@ -69,7 +102,7 @@ export function Dashboard() {
         </div>
       </section>
 
-      <section className="shell" style={{ padding: "24px 0" }}>
+      <section id="lookup" className="shell" style={{ padding: "24px 0" }}>
         <div className="lookup-grid">
           <section className="card" style={{ padding: 22 }}>
             <p className="eyebrow" style={{ margin: 0 }}>Token lookup</p>
@@ -89,6 +122,11 @@ export function Dashboard() {
               Live analysis uses BNB Chain RPC, BscScan, OpenAI, Gemini fallback, and optional social providers when configured.
               If a provider is unavailable, MemeGuard still returns a partial report with warnings.
             </p>
+            <div className="guide-grid">
+              <div className="guide-card"><strong>1. Paste</strong><p style={{ color: "var(--muted)", marginBottom: 0 }}>Use a BNB Chain token contract address.</p></div>
+              <div className="guide-card"><strong>2. Scan</strong><p style={{ color: "var(--muted)", marginBottom: 0 }}>MemeGuard reads public chain evidence.</p></div>
+              <div className="guide-card"><strong>3. Share</strong><p style={{ color: "var(--muted)", marginBottom: 0 }}>Export a report card and community copy.</p></div>
+            </div>
             {error ? <p style={{ color: "var(--red)" }}>{error}</p> : null}
           </section>
 
@@ -115,6 +153,18 @@ export function Dashboard() {
 
       {report ? (
         <section className="shell" style={{ display: "grid", gap: 16, padding: "18px 0 40px" }}>
+          <section className="card result-header">
+            <div>
+              <p className="eyebrow" style={{ margin: 0 }}>Analysis complete</p>
+              <h2 style={{ fontSize: 34, margin: "8px 0" }}>{report.token.name ?? "Unknown token"} trust brief</h2>
+              <p style={{ color: "var(--muted)", margin: 0, wordBreak: "break-word" }}>{report.token.address}</p>
+            </div>
+            <div className="metric-pills">
+              <div className="metric-pill"><span>Verdict</span><strong>{report.score.category}</strong></div>
+              <div className="metric-pill"><span>Score</span><strong>{report.score.value}/100</strong></div>
+              <div className="metric-pill"><span>Network</span><strong>BNB Chain</strong></div>
+            </div>
+          </section>
           <div className="grid-auto">
             <RiskScore report={report} />
             <section className="card" style={{ padding: 20 }}>
