@@ -1,0 +1,27 @@
+{
+  "name": "memeguard-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI trust briefs for memecoin launches on BNB Chain.",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @memeguard/api & npm run dev --workspace @memeguard/web",
+    "build": "npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/api && npm run build --workspace @memeguard/web",
+    "lint": "npm run lint --workspace @memeguard/shared && npm run lint --workspace @memeguard/api && npm run lint --workspace @memeguard/web",
+    "test": "npm run build --workspace @memeguard/shared && npm run test --workspace @memeguard/shared && npm run test --workspace @memeguard/api",
+    "api": "npm run dev --workspace @memeguard/api",
+    "web": "npm run dev --workspace @memeguard/web"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}

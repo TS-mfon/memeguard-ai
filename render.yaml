@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: memeguard-api
+    runtime: node
+    plan: starter
+    rootDir: .
+    buildCommand: npm install && npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/api
+    startCommand: npm run start --workspace @memeguard/api
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BSC_CHAIN_ID
+        value: "56"
+      - key: BSC_RPC_URL
+        value: https://bsc-dataseed.bnbchain.org
+      - key: CORS_ORIGINS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: BSCSCAN_API_KEY
+        sync: false
+      - key: EXA_API_KEY
+        sync: false
+      - key: X_BEARER_TOKEN
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_PUBLIC_KEY
+        sync: false
+      - key: DISCORD_APPLICATION_ID
+        sync: false

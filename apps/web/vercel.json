@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ../.. && npm run build --workspace @memeguard/shared && npm run build --workspace @memeguard/web",
+  "installCommand": "cd ../.. && npm install",
+  "framework": "nextjs"
+}
