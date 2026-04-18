@@ -58,11 +58,11 @@ export function Dashboard() {
             <div>
               <p className="eyebrow" style={{ margin: 0 }}>Launch intelligence for memecoin culture</p>
               <h1 className="hero-title">AI risk briefs before the meme gets amplified.</h1>
-              <p className="hero-copy">
-                Paste a BNB Smart Chain token contract. MemeGuard AI checks live contract evidence, explorer data,
-                ownership signals, transfer behavior, and optional social context, then writes a plain-English trust brief
-                for holders, moderators, and launch communities.
-              </p>
+              <div className="hero-brief">
+                <span>Paste a BNB Smart Chain token contract.</span>
+                <strong>MemeGuard AI turns live launch signals into a plain-English trust brief.</strong>
+                <span>Built for holders, moderators, and launch communities that need clarity before hype spreads.</span>
+              </div>
               <div className="hero-actions">
                 <a className="btn" href="#lookup" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>Analyze a token</a>
                 <a className="btn secondary" href="/about" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>Read the pitch</a>
@@ -74,7 +74,6 @@ export function Dashboard() {
                 <div className="chip-row">
                   <span className="chip">BSC mainnet</span>
                   <span className="chip">Four.meme ready</span>
-                  <span className="chip">Read-only</span>
                 </div>
                 <div className="console-score">
                   <div className="score-orbit">72</div>
@@ -93,12 +92,6 @@ export function Dashboard() {
             </aside>
           </div>
 
-          <div className="stat-strip">
-            <div className="stat"><strong>Live BSC</strong><span>RPC and BscScan evidence</span></div>
-            <div className="stat"><strong>AI Analyst</strong><span>OpenAI with Gemini fallback</span></div>
-            <div className="stat"><strong>No wallet</strong><span>Read-only lookup, no private keys</span></div>
-            <div className="stat"><strong>Meme-ready</strong><span>Posts, captions, share card</span></div>
-          </div>
         </div>
       </section>
 
@@ -107,10 +100,6 @@ export function Dashboard() {
           <section className="card" style={{ padding: 22 }}>
             <p className="eyebrow" style={{ margin: 0 }}>Token lookup</p>
             <h2 className="section-title">Check a BNB Chain token</h2>
-            <p style={{ color: "var(--muted)", lineHeight: 1.6 }}>
-              Enter the contract address for any BEP-20 style token. The live scan reads public chain data only:
-              no wallet connect, no signing, no trading, and no token approval.
-            </p>
             <label htmlFor="token">Token contract address</label>
             <div className="input-row" style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 10, marginTop: 8 }}>
               <input id="token" className="input" placeholder="0x..." value={address} onChange={(event) => setAddress(event.target.value)} />
@@ -118,10 +107,6 @@ export function Dashboard() {
                 {loading ? "Analyzing..." : "Analyze token"}
               </button>
             </div>
-            <p style={{ color: "var(--muted)", fontSize: 14, lineHeight: 1.5 }}>
-              Live analysis uses BNB Chain RPC, BscScan, OpenAI, Gemini fallback, and optional social providers when configured.
-              If a provider is unavailable, MemeGuard still returns a partial report with warnings.
-            </p>
             <div className="guide-grid">
               <div className="guide-card"><strong>1. Paste</strong><p style={{ color: "var(--muted)", marginBottom: 0 }}>Use a BNB Chain token contract address.</p></div>
               <div className="guide-card"><strong>2. Scan</strong><p style={{ color: "var(--muted)", marginBottom: 0 }}>MemeGuard reads public chain evidence.</p></div>

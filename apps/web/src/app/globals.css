@@ -150,6 +150,32 @@ input {
   max-width: 760px;
 }
 
+.hero-brief {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid rgba(243, 186, 47, 0.3);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(243, 186, 47, 0.16), rgba(255, 255, 255, 0.04)),
+    rgba(12, 11, 7, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.hero-brief span {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.hero-brief strong {
+  color: var(--foreground);
+  font-size: clamp(22px, 4vw, 34px);
+  line-height: 1.12;
+}
+
 .hero-actions {
   display: flex;
   gap: 12px;
