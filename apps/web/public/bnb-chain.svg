@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">BNB Chain</title>
+  <desc id="desc">Gold BNB Chain mark on a dark background.</desc>
+  <rect width="256" height="256" rx="48" fill="#0b0902"/>
+  <path fill="#f3ba2f" d="M128 28 61 95l24 24 43-43 43 43 24-24-67-67Z"/>
+  <path fill="#f3ba2f" d="m28 128 67-67 24 24-43 43 43 43-24 24-67-67Z"/>
+  <path fill="#f3ba2f" d="m128 228-67-67 24-24 43 43 43-43 24 24-67 67Z"/>
+  <path fill="#f3ba2f" d="m228 128-67 67-24-24 43-43-43-43 24-24 67 67Z"/>
+  <path fill="#f3ba2f" d="m128 94 34 34-34 34-34-34 34-34Z"/>
+</svg>

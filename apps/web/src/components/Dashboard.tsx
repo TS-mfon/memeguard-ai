@@ -48,7 +48,7 @@ export function Dashboard() {
         <div className="shell" style={{ padding: "28px 0 40px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
             <div className="brand-row">
-              <img className="brand-logo" src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNB Chain logo" />
+              <img className="brand-logo" src="/bnb-chain.svg" alt="BNB Chain logo" />
               <img className="brand-logo" src="https://four.meme/favicon.ico" alt="Four.meme icon" />
               <span className="eyebrow">BNB Chain x Four.meme launch intelligence</span>
             </div>

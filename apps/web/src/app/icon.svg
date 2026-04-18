@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">MemeGuard AI</title>
+  <desc id="desc">MemeGuard AI browser icon.</desc>
+  <rect width="256" height="256" rx="52" fill="#090803"/>
+  <path fill="#f3ba2f" d="M128 24 52 68v58c0 50 31 86 76 106 45-20 76-56 76-106V68l-76-44Z"/>
+  <path fill="#090803" d="M128 50 76 80v48c0 34 20 59 52 76 32-17 52-42 52-76V80l-52-30Z"/>
+  <path fill="#f3ba2f" d="M93 101c0-15 12-27 27-27h16c15 0 27 12 27 27v9h-20v-9c0-4-3-7-7-7h-16c-4 0-7 3-7 7v54h-20v-54Z"/>
+  <path fill="#f3ba2f" d="M109 126h38v19h-38z"/>
+  <circle cx="96" cy="178" r="10" fill="#f3ba2f"/>
+  <circle cx="160" cy="178" r="10" fill="#f3ba2f"/>
+</svg>
